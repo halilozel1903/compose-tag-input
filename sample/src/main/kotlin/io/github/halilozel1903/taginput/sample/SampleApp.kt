@@ -87,7 +87,7 @@ private fun WideLayout(scene: Scene?) {
         Modifier
             .fillMaxSize()
             .windowInsetsPadding(WindowInsets.safeDrawing)
-            .padding(horizontal = 32.dp, vertical = 20.dp),
+            .padding(horizontal = 32.dp, vertical = 12.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text("Tag input", style = MaterialTheme.typography.headlineMedium)
@@ -104,7 +104,7 @@ private fun WideLayout(scene: Scene?) {
             }
             Column(
                 Modifier.weight(1f).widthIn(max = 640.dp).verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.spacedBy(28.dp),
+                verticalArrangement = Arrangement.spacedBy(20.dp),
             ) {
                 PostForm(scene)
                 SkillsForm(scene)

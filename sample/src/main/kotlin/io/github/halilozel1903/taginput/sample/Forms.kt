@@ -51,7 +51,7 @@ fun RecipientsForm(scene: Scene?) {
     val cc = rememberTagInputState(initialTags = listOf("jordan.kim@example.org"), config = config)
     var subject by rememberSaveable { mutableStateOf("Planning notes for the demo project") }
     var body by rememberSaveable {
-        mutableStateOf("Hi all,\n\nHere are the notes from today. Reply with anything I missed.\n\nAlex")
+        mutableStateOf("Hi all,\n\nNotes from today are below. Reply with anything I missed.")
     }
 
     LaunchedEffect(scene) {
@@ -108,7 +108,7 @@ fun RecipientsForm(scene: Scene?) {
             value = body,
             onValueChange = { body = it },
             label = { Text("Message") },
-            minLines = 5,
+            minLines = 3,
             modifier = Modifier.fillMaxWidth(),
         )
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -189,7 +189,7 @@ fun PostForm(scene: Scene?) {
             value = summary,
             onValueChange = { summary = it },
             label = { Text("Summary") },
-            minLines = 3,
+            minLines = 2,
             modifier = Modifier.fillMaxWidth(),
         )
     }
